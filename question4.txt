@@ -1,1 +1,19 @@
 
+// Assuming str will be in format: "My name is Anushka"
+function reverseWithSplitAndReverse(str) {
+    return str.split('').reverse().join('').split(' ').reverse().join(' ')
+}
+
+
+// Assuming array will be in format: ["My", "name", "is", "Anushka"]
+function reverseWithoutSplitAndReverse(array) {
+    var temp;
+    for(var i=0; i<array.length; i++) {
+        temp = '';
+        for (var j = array[i].length - 1; j >= 0; j--) {
+            temp += array[i][j]
+        }
+		array[i] = temp;
+    }
+    return array;
+}
