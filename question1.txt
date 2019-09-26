@@ -1,1 +1,23 @@
 
+let is used for variable declaration in javascript and let is block scoped.
+eg: let x = 5;
+
+
+this refers to the object it belongs to.
+
+eg: 
+var x = {
+    y: 1,
+    getValue: function() {
+        return this;
+    }
+}
+
+x.getValue() // this will refer to x object here
+
+function getValue() {
+    return this;
+}
+
+getValue(); // this will refer to window object here
+
