@@ -1,1 +1,11 @@
 
+function getAllKeys(object) {
+    var keys = [];
+    for(var key in object) {
+        keys.push(key);
+        if(typeof object[key] === 'object') {
+            keys = keys.concat(getAllKeys(object[key]));
+        }
+    }
+    return keys;
+}
