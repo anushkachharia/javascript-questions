@@ -1,1 +1,12 @@
 
+function removeDuplicates(arr) {
+    let strings = [];
+    let stringMap = {};
+    for(let i=0; i<arr.length; i++) {
+        stringMap[arr[i]] = true;
+    }
+    for(var key in stringMap) {
+        strings.push(key);
+    }
+    return strings;
+}
