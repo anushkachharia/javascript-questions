@@ -1,1 +1,14 @@
 
+function getCharacterCount(array) {
+    let output = {};
+    for(let i=0; i<array.length; i++) {
+        for(let j=0; j<array[i].length; j++) {
+            if(output[array[i][j]]) {
+                output[array[i][j]]++;
+            } else {
+                output[array[i][j]] = 1;
+            }
+        }
+    }
+    return output;
+}
